@@ -1,12 +1,12 @@
 # 🏦 Treasury ALM Quantitative Dashboard
 
-**Portfolio Project for Quantitative Model Analyst (Treasury)**
+**A quantitative treasury / ALM portfolio project**
 
 A 6-tab interactive Streamlit dashboard demonstrating balance sheet forecasting, NII sensitivity analysis, interest rate risk measurement, deposit behavior modeling, model validation, and macroeconomic scenario generation.
 
-## 🎯 Skills Matrix — JD Requirement Mapping
+## 🎯 Skills Demonstrated
 
-| JD Requirement | Where Demonstrated | Dashboard Tab |
+| Skill Area | Where Demonstrated | Dashboard Tab |
 |---|---|---|
 | Developing advanced statistical models for balance sheet forecasting | ARIMAX(2,1,1) with macro exogenous variables | Tab 1: Balance Sheet Forecast |
 | Interest rate risk analysis | EVE + NII sensitivity under 6 Basel IRRBB scenarios | Tab 3: IRR Dashboard |
@@ -68,3 +68,7 @@ VAR(2) macroeconomic scenario engine showing GDP, unemployment, and Fed funds ra
 ---
 
 *Built to demonstrate quantitative modeling capabilities as a portfolio project demonstrating Treasury ALM quantitative modeling capabilities.*
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
