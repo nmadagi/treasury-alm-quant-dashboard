@@ -279,7 +279,7 @@ with tab2:
 
     st.markdown("""
     <div class="method-box">
-        <strong>Asset Sensitivity:</strong> U.S. Bank is moderately asset-sensitive — assets reprice faster than 
+        <strong>Asset Sensitivity:</strong> The bank is moderately asset-sensitive — assets reprice faster than 
         liabilities. A +100bps shock increases NII ~$150M annually. <strong>Deposit Beta:</strong> 40% 
         pass-through over 12 months. <strong>Prepayment Effect:</strong> Rate increases slow prepayments, 
         extending asset duration and boosting interest income.

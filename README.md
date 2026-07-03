@@ -25,8 +25,8 @@ A 6-tab interactive Streamlit dashboard demonstrating balance sheet forecasting,
 ## 📦 Quick Start
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/usbank-treasury-alm-quant-dashboard.git
-cd usbank-treasury-alm-quant-dashboard
+git clone https://github.com/nmadagi/treasury-alm-quant-dashboard.git
+cd treasury-alm-quant-dashboard
 pip install -r requirements.txt
 streamlit run app.py
 ```
