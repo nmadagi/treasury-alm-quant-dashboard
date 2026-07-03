@@ -4,6 +4,8 @@
 
 A 6-tab interactive Streamlit dashboard demonstrating balance sheet forecasting, NII sensitivity analysis, interest rate risk measurement, deposit behavior modeling, model validation, and macroeconomic scenario generation.
 
+![Dashboard](docs/dashboard.png)
+
 ## 🎯 Skills Demonstrated
 
 | Skill Area | Where Demonstrated | Dashboard Tab |
