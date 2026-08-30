@@ -22,7 +22,7 @@ A 6-tab interactive Streamlit dashboard demonstrating balance sheet forecasting,
 
 ## 🚀 Live Demo
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://usbank-treasury-alm-quant-dashboard.streamlit.app)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://treasury-alm-quant-dashboard.streamlit.app)
 
 ## 📦 Quick Start
 
