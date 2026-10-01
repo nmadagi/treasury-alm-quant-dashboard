@@ -1,4 +1,4 @@
-# 🏦 Treasury ALM Quantitative Dashboard
+# Treasury ALM Quantitative Dashboard
 
 **A quantitative treasury / ALM portfolio project**
 
@@ -6,7 +6,7 @@ A 6-tab interactive Streamlit dashboard demonstrating balance sheet forecasting,
 
 ![Dashboard](docs/dashboard.png)
 
-## 🎯 Skills Demonstrated
+## Skills Demonstrated
 
 | Skill Area | Where Demonstrated | Dashboard Tab |
 |---|---|---|
@@ -20,11 +20,11 @@ A 6-tab interactive Streamlit dashboard demonstrating balance sheet forecasting,
 | Communicating modeling approaches and results | Interactive visualizations, method boxes, stakeholder-ready layout | All tabs |
 | Knowledge of regulatory rules | Basel IRRBB implementation, SR 11-7 model governance | Tab 3 + docs/ |
 
-## 🚀 Live Demo
+## Live Demo
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://treasury-alm-quant-dashboard.streamlit.app)
 
-## 📦 Quick Start
+## Quick Start
 
 ```bash
 git clone https://github.com/nmadagi/treasury-alm-quant-dashboard.git
@@ -33,15 +33,15 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## 🛠 Tech Stack
+## Tech Stack
 
-- **Python** — Primary language
-- **Streamlit** — Dashboard framework
-- **Plotly** — Interactive visualizations
-- **Pandas / NumPy** — Data manipulation and synthetic data generation
-- **Statistical Methods** — ARIMAX, VAR, OLS regression, walk-forward validation
+- **Python** - Primary language
+- **Streamlit** - Dashboard framework
+- **Plotly** - Interactive visualizations
+- **Pandas / NumPy** - Data manipulation and synthetic data generation
+- **Statistical Methods** - ARIMAX, VAR, OLS regression, walk-forward validation
 
-## 📊 Dashboard Tabs
+## Dashboard Tabs
 
 ### 1. Balance Sheet Forecast
 ARIMAX model forecasting loan balances, deposit balances, securities, and borrowings with GDP, unemployment, Fed funds rate as exogenous variables.
@@ -61,16 +61,16 @@ Non-maturity deposit decay rate regression showing the non-linear relationship b
 ### 6. Macro Scenarios
 VAR(2) macroeconomic scenario engine showing GDP, unemployment, and Fed funds rate paths under baseline vs. severely adverse scenarios.
 
-## 👤 Author
+## Author
 
 **Nitin Madagi**
-- MS Financial Mathematics (Financial Risk Management Track) — University at Buffalo, SUNY
+- MS Financial Mathematics (Financial Risk Management Track) - University at Buffalo, SUNY
 - [LinkedIn](https://www.linkedin.com/in/nitinmadagi)
 
 ---
 
 *Built to demonstrate quantitative modeling capabilities as a portfolio project demonstrating Treasury ALM quantitative modeling capabilities.*
 
-## 📄 License
+## License
 
 This project is licensed under the [MIT License](LICENSE).

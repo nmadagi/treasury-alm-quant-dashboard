@@ -8,7 +8,6 @@ from plotly.subplots import make_subplots
 # ── Page Config ──
 st.set_page_config(
     page_title="Treasury ALM Quantitative Dashboard",
-    page_icon="🏦",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
@@ -49,7 +48,7 @@ st.markdown("""
 # ── Header ──
 st.markdown("""
 <div class="header-banner">
-    <div class="header-sub">Portfolio Project — Nitin Madagi</div>
+    <div class="header-sub">Portfolio Project - Nitin Madagi</div>
     <h1>Treasury ALM Quantitative Dashboard</h1>
     <p>Balance Sheet Forecasting · NII Sensitivity · Interest Rate Risk · Deposit Behavior · Model Validation · Macro Scenarios</p>
 </div>
@@ -186,12 +185,12 @@ def metric_row(cols_data):
 # ══════════════════════════════════════════════════════════════
 
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
-    "📊 Balance Sheet Forecast",
-    "💰 NII Sensitivity",
-    "⚡ IRR Dashboard",
-    "🏦 Deposit Behavior",
-    "✅ Model Validation",
-    "🌐 Macro Scenarios",
+    "Balance Sheet Forecast",
+    "NII Sensitivity",
+    "IRR Dashboard",
+    "Deposit Behavior",
+    "Model Validation",
+    "Macro Scenarios",
 ])
 
 # ── Tab 1: Balance Sheet Forecast ──
@@ -225,7 +224,7 @@ with tab1:
     fig.add_vline(x=forecast_start, line_dash="dot", line_color="#94a3b8",
                   annotation_text="Forecast →", annotation_position="top left")
     fig.update_layout(
-        title="Balance Sheet Forecast — ARIMAX Model",
+        title="Balance Sheet Forecast - ARIMAX Model",
         yaxis_title="$ Billions", template="plotly_white", height=420,
         legend=dict(orientation="h", yanchor="bottom", y=-0.25),
     )
@@ -236,7 +235,7 @@ with tab1:
         <strong>Model:</strong> ARIMAX(2,1,1) with exogenous macro variables (GDP growth, unemployment rate, 
         Fed funds rate, consumer confidence index). Walk-forward validation with 4-quarter rolling window. 
         RMSE: $2.3B on loan forecast, $1.8B on deposit forecast. Seasonal decomposition applied to capture 
-        Q4 deposit surge patterns. Chow test confirms structural stability across 2020–2025 sample period.
+        Q4 deposit surge patterns. Chow test confirms structural stability across 2020-2025 sample period.
     </div>
     """, unsafe_allow_html=True)
 
@@ -272,14 +271,14 @@ with tab2:
         line=dict(color=stress_color, width=2.5, dash="dash"),
     ))
     fig.update_layout(
-        title=f"Monthly NII Projection — Shock: {'+' if rate_shock>=0 else ''}{rate_shock} bps",
+        title=f"Monthly NII Projection - Shock: {'+' if rate_shock>=0 else ''}{rate_shock} bps",
         yaxis_title="$ Millions", template="plotly_white", height=400,
     )
     st.plotly_chart(fig, use_container_width=True)
 
     st.markdown("""
     <div class="method-box">
-        <strong>Asset Sensitivity:</strong> The bank is moderately asset-sensitive — assets reprice faster than 
+        <strong>Asset Sensitivity:</strong> The bank is moderately asset-sensitive - assets reprice faster than 
         liabilities. A +100bps shock increases NII ~$150M annually. <strong>Deposit Beta:</strong> 40% 
         pass-through over 12 months. <strong>Prepayment Effect:</strong> Rate increases slow prepayments, 
         extending asset duration and boosting interest income.
@@ -310,7 +309,7 @@ with tab3:
     fig.add_vline(x=-15, line_dash="dash", line_color=RED, annotation_text="EVE Limit (-15%)")
     fig.add_vline(x=-10, line_dash="dash", line_color="#f97316", annotation_text="NII Limit (-10%)")
     fig.update_layout(
-        title="Basel IRRBB — Six Prescribed Scenarios",
+        title="Basel IRRBB - Six Prescribed Scenarios",
         xaxis_title="% Change", template="plotly_white", height=420,
         barmode="group",
     )
@@ -324,9 +323,9 @@ with tab3:
         status_data.append({
             "Scenario": row["Scenario"],
             "ΔEVE (%)": row["ΔEVE (%)"],
-            "EVE Status": "✅ Within Limit" if eve_ok else "⚠️ Watch",
+            "EVE Status": "Within Limit" if eve_ok else "Watch",
             "ΔNII (%)": row["ΔNII (%)"],
-            "NII Status": "✅ Within Limit" if nii_ok else "⚠️ Watch",
+            "NII Status": "Within Limit" if nii_ok else "Watch",
         })
     st.dataframe(pd.DataFrame(status_data), use_container_width=True, hide_index=True)
 
@@ -365,8 +364,8 @@ with tab4:
     <div class="method-box">
         <strong>Dependent Variable:</strong> Annual deposit balance decay rate.<br>
         <strong>Independent Variables:</strong> Rate spread, unemployment rate, consumer confidence, log(account vintage).<br>
-        <strong>Estimation:</strong> OLS with Newey-West HAC standard errors (4 lags). Sample: Jan 2015 – Dec 2025, monthly.<br>
-        <strong>Key Finding:</strong> Non-linear relationship — decay accelerates as rate spread widens beyond 200bps, 
+        <strong>Estimation:</strong> OLS with Newey-West HAC standard errors (4 lags). Sample: Jan 2015 - Dec 2025, monthly.<br>
+        <strong>Key Finding:</strong> Non-linear relationship - decay accelerates as rate spread widens beyond 200bps, 
         consistent with depositor rate-seeking behavior at higher spread levels.
     </div>
     """, unsafe_allow_html=True)
@@ -414,7 +413,7 @@ with tab5:
         line=dict(color=GOLD, width=2.5, dash="dash"), marker=dict(size=4),
     ))
     fig.update_layout(
-        title="Walk-Forward Validation — Actual vs. Predicted (24-Month OOS)",
+        title="Walk-Forward Validation - Actual vs. Predicted (24-Month OOS)",
         yaxis_title="$ Billions", template="plotly_white", height=400,
     )
     st.plotly_chart(fig, use_container_width=True)
@@ -454,7 +453,7 @@ with tab6:
                               mode="lines+markers", name="Severely Adverse",
                               line=dict(color=RED, width=2.5, dash="dash"), marker=dict(size=7)))
     fig.add_hline(y=0, line_dash="dot", line_color=RED)
-    fig.update_layout(title="GDP Growth Rate — Baseline vs. Severely Adverse",
+    fig.update_layout(title="GDP Growth Rate - Baseline vs. Severely Adverse",
                        yaxis_title="GDP Growth %", template="plotly_white", height=340)
     st.plotly_chart(fig, use_container_width=True)
 
@@ -488,7 +487,7 @@ with tab6:
     <div class="method-box">
         <strong>Model:</strong> VAR(2) with 8-quarter forecast horizon. Variables: GDP growth, unemployment rate, 
         CPI inflation, Fed funds rate, 10Y Treasury yield, housing starts. Baseline reflects Blue Chip consensus 
-        forecasts. Severely adverse scenario calibrated to 2008–09 recession severity with 2-quarter lag structure.
+        forecasts. Severely adverse scenario calibrated to 2008-09 recession severity with 2-quarter lag structure.
         Internal consistency enforced through impulse response function analysis.
     </div>
     """, unsafe_allow_html=True)
